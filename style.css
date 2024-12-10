@@ -8,7 +8,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.4;
-    color: #1A1A40;
+    color: #104379;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background-color: #142af1cb;
+    background-color: #104379;
     color: white;
     text-align: center;
     display: flex;
@@ -71,7 +71,7 @@ section {
     width: 100%;
     padding: 30px;
     text-align: center;
-    background-color:#064cb65d ;
+    background-color:#1043793d ;
     
 }
 
@@ -102,65 +102,63 @@ section {
     justify-content: center !important;
 }
 
-
-
-.carousel {
-    width: 100%; /* Controla a largura do carrossel (ajustável) */
-    max-width: 800px; /* Define um limite máximo para largura */
-    height: 300px; /* Altura específica para o carrossel */
-    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse o carrossel */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+.navbar-botao{
+    background-color:#104379;
 }
 
-/* Configuração para os itens do carrossel */
+.carousel {
+    width: 500px !important; /* Largura fixa */
+    height: 350px !important; /* Altura fixa */
+    margin: 0 auto !important; /* Centraliza horizontalmente */
+    overflow: hidden; /* Evita que o conteúdo exceda o contêiner */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    width: 100% !important; /* Igual à largura do carousel */
+    height: 350px; /* Igual à altura do carousel */
+    object-fit: contain !important; /* Ajusta o conteúdo sem distorção */
+    object-position: center !important; /* Centraliza a imagem */
+}
+
+
 .carousel-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100%; Preenche toda a altura disponível */
+    height: 100%;
 }
 
-/* Ajuste das imagens */
-.carousel-item img {
-    width: 100%; /* A imagem ocupa a largura do contêiner */
-    height: 100%; /* A imagem ocupa a altura do contêiner */
-    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner proporcionalmente */
-    object-position: center; /* Centraliza a imagem */
-}
 
-/* Configurações responsivas */
 @media (max-width: 768px) {
     .carousel {
-        width: 90%; /* Ajusta a largura para telas menores */
-        height: 200px; /* Reduz a altura em telas pequenas */
-    }}
+        width: 90%;
+        height: 200px;
+    }
+}
 
 @media (min-width: 1200px) {
     .carousel {
-        max-height: 700px; /* Ajuste da altura em telas de desktop */
+        max-height: 700px;
+    }
+}
+
+table {
+    width: 800px !important;
+    height: auto;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100% !important;
     }
 }
 
 
-/* Define tamanho fixo para a tabela */
-table {
-    width: 800px !important; /* Largura fixa */
-    height: auto; /* Altura ajusta conforme o conteúdo */
-    margin: auto; /* Centraliza a tabela */
-  }
-  
-  /* Para celular (responsivo) */
-  @media (max-width: 768px) {
-    table {
-      width: 100% !important; /* Permite que a tabela ocupe toda a tela em dispositivos menores */
-    }
-  }
-  
-
 
 footer {
-    background-color:   #142af1cb;
+    background-color:   #104379;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -197,12 +195,13 @@ footer {
     justify-content: space-between;
     padding: 15px;
     width: 230px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+    background-color: #F5F5F5;
+    border: 1px solid #DDD;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
+    color: #1A1A40; 
 }
 
 .product-image {
@@ -243,9 +242,11 @@ footer {
     margin-bottom: 15px;
 }
 
+
+
 .buy-button {
-    background-color: #2044e6ea;
-    color: white;
+    background-color: #104379; 
+    color: #FFFFFF;
     border: none;
     border-radius: 25px;
     padding: 10px 20px;
@@ -263,6 +264,8 @@ footer {
     header {
         flex-direction: column;
         padding: 15px;
+        background-color: #0A1E99; /* Azul mais escuro */
+        color: #FFFFFF; /* Branco puro */
     }
 
 }
@@ -365,7 +368,7 @@ select, textarea, button {
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #104379;
     color: white;
     border: none;
     cursor: pointer;
@@ -373,7 +376,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #104379;
 }
 
 @media (max-width: 1000px) {
