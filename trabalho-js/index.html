@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Painel de Controle (Editor) -->
+        <div class="editor-panel">
+            <h2>Editor de Menu</h2>
+
+            <!-- Controles de Personalização -->
+            <div class="control-group">
+                <label for="bg-color">Cor de Fundo do Menu:</label>
+                <input type="color" id="bg-color" value="#1a1a1a">
+            </div>
+
+            <div class="control-group">
+                <label for="item-bg-color">Cor de Fundo dos Itens:</label>
+                <input type="color" id="item-bg-color" value="#2d2d2d">
+            </div>
+
+            <div class="control-group">
+                <label for="text-color">Cor do Texto:</label>
+                <input type="color" id="text-color" value="#ffffff">
+            </div>
+
+            <div class="control-group">
+                <label for="spacing">Espaçamento entre Itens:</label>
+                <input type="range" id="spacing" min="0" max="50" value="20">
+            </div>
+
+            <div class="control-group">
+                <label for="border-radius">Borda Arredondada:</label>
+                <input type="range" id="border-radius" min="0" max="20" value="4">
+            </div>
+
+            <div class="control-group">
+                <label for="border-width">Espessura da Borda:</label>
+                <input type="range" id="border-width" min="0" max="5" value="1">
+            </div>
+
+            <div class="control-group">
+                <label for="border-color">Cor da Borda:</label>
+                <input type="color" id="border-color" value="#333333">
+            </div>
+
+            <div class="control-group">
+                <label for="font-size">Tamanho da Fonte:</label>
+                <input type="range" id="font-size" min="12" max="24" value="14">
+            </div>
+
+            <!-- Controles de Menu -->
+            <div class="control-group">
+                <input type="text" id="new-item" placeholder="Novo item" class="form-control">
+                <button onclick="addItem()" class="btn btn-primary">
+                    <i class="material-icons">add</i> Adicionar Item
+                </button>
+                <button onclick="removeItem()" class="btn btn-danger">
+                    <i class="material-icons">remove</i> Remover Item
+                </button>
+            </div>
+
+            <!-- Controles de Imagem -->
+            <div class="control-group">
+                <label for="image-upload">Inserir Imagem:</label>
+                <input type="file" id="image-upload" accept="image/*" class="form-control">
+                <button onclick="removeImage()" class="btn btn-outline-danger mt-2">
+                    <i class="material-icons">delete</i> Remover Logo
+                </button>
+            </div>
+        </div>
+
+        <!-- Visualização do Menu -->
+        <div class="preview-panel">
+            <h2>Menu Final</h2>
+            <div class="menu-container">
+                <div class="menu-image">
+                    <img id="menu-image" src="" alt="Logo">
+                </div>
+                <div class="menu-items" id="menu">
+                    <div class="menu-item" contenteditable="true">Início</div>
+                    <div class="menu-item" contenteditable="true">Sobre</div>
+                    <div class="menu-item" contenteditable="true">Contato</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
